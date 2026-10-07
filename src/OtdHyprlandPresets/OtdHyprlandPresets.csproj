@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>OtdHyprlandPresets</RootNamespace>
+    <AssemblyName>OtdHyprlandPresets</AssemblyName>
+    <Version>0.1.0</Version>
+    <!-- Plugins are loaded by the daemon; never ship the OTD assemblies or deps.json -->
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="OtdHyprlandPresets.Tests" />
+  </ItemGroup>
+
+  <!-- Compile-only references, built from the OpenTabletDriver v0.6.7 tag (see refs/README.md). -->
+  <ItemGroup>
+    <Reference Include="OpenTabletDriver">
+      <HintPath>../../refs/OpenTabletDriver.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="OpenTabletDriver.Plugin">
+      <HintPath>../../refs/OpenTabletDriver.Plugin.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="OpenTabletDriver.Desktop">
+      <HintPath>../../refs/OpenTabletDriver.Desktop.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
