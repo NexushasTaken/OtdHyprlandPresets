@@ -5,7 +5,7 @@ using System.Text;
 namespace OtdHyprlandPresets;
 
 /// <summary>
-/// Hyprland IPC over Unix sockets (no TCP involved):
+/// Hyprland IPC over Unix sockets:
 ///   $XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket.sock  - request/reply (what hyprctl uses)
 ///   $XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - event stream, "EVENT>>DATA\n"
 /// </summary>

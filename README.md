@@ -12,7 +12,7 @@ Hyprland ──(.socket2.sock events)──► plugin (inside otd-daemon) ──
          ◄─(.socket.sock j/activewindow)─┘
 ```
 
-- **No TCP anywhere.** Hyprland's IPC is two Unix sockets in
+- Hyprland's IPC is two Unix sockets in
   `$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/`. `.socket.sock` is the request/reply socket that
   `hyprctl` uses. `.socket2.sock` streams events such as `activewindowv2>>ADDRESS`.
   (`otd` talks to `otd-daemon` through a .NET named pipe, which is also a Unix socket. This plugin
