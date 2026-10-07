@@ -95,3 +95,7 @@ time: it's re-read on the next focus change, so no restart is needed.
 - Every preset switch rebuilds the output mode, filters and bindings. That takes milliseconds, but
   `debounceMs` keeps quick pen sweeps across several windows from triggering repeated switches.
 - Log messages appear under the group **Hyprland Presets**.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
